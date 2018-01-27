@@ -94,9 +94,10 @@
             var data = {};
             $("form#employee_form :input").each(function(){
                 var input = $(this);
-                console.log(input);
+                data[$(this).attr('name')] = this.value
             });
             alert("Saving data please wait (here I'll put a spinner)");
+            alert("Data found: " + JSON.stringify(data, null, 4));
         });
     </script>
 @endsection
