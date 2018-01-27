@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Auth::routes();
+Route::get('/', 'DataController@index')->name('form');
+Route::get('/view_data', 'DataController@view_data')->name('view_data');
